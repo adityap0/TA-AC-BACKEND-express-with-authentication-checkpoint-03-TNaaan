@@ -24,7 +24,7 @@ Each user will have
 - login using email/password combination
 - login with social OAuth (Github + Google)
 - verify email for local login using nodemailer
-- reset apssword for local login
+- reset password for local login
 - A user can register & then login using email/password or he/she can directly login using social OAuth. Structure schema so that all 3 login data should be saved in same document for a single user.
 
 3. Add Income & Expenses
@@ -64,6 +64,20 @@ On dashboard users can
 - view list of incomes, expenses for the current month
 - filter by date(from & to)
 - filter by source of income & expense category
-- filter by a combination of date & category
-- display savings for current month
+- filter by a combinatcion of date & category
+- display savings for urrent month
 - select inputs for viewing income,expenses and savings for a particular month & year
+
+Income
+
+Source - [String],
+UserId - [],
+Amount -
+Timestamps - Month, Date
+
+Expense -
+
+Source -
+UserId -
+Amount -
+Timestamps -

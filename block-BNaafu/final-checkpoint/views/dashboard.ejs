@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="index-title">Hello! <%= user.name%></h1>
+      <h2>Welcome to the Boarding Page</h2>
+      <a href="/users/logout"><button>logout</button></a>
+      <a href="/dashboard/income/add"><button>ADD INCOME</button></a>
+      <a href="/dashboard/expense/add"><button>ADD EXPENSE</button></a>
+      <a href="/dashboard"><button>DASHBOARD</button></a>
+    </header>
+    <main>
+      <div class="dashboard-details">
+        <div>
+          <h1>Income Details (Current Month)</h1>
+          <ul>
+            <%incomes.forEach((i)=>{%>
+            <li>
+              <h2>
+                FROM : <% i.sources.forEach((source)=>{%> <%= source%> <%})%>
+              </h2>
+              <h2>AMOUNT :₹<%= i.amount%></h2>
+              DATE :
+              <h2><%= i.date%></h2>
+            </li>
+            <% })%>
+          </ul>
+        </div>
+        <div>
+          <h1>Expense Details (Current Month)</h1>
+          <ul>
+            <%expenses.forEach((i)=>{%>
+            <li>
+              <h2>
+                FROM : <% i.sources.forEach((source)=>{%> <%= source%> <%})%>
+              </h2>
+
+              <h2>AMOUNT :₹<%= i.amount%></h2>
+              DATE :
+              <h2><%= i.date%></h2>
+            </li>
+            <% })%>
+          </ul>
+        </div>
+        <div class="filter-div">
+          <h1>Savings</h1>
+          <p class="savings"><%= savings%> ₹</p>
+        </div>
+      </div>
+      <div class="filter">
+        <form action="/filters/filter-1" method="POST" class="date-filter">
+          <input type="date" name="from" id="from-date" />
+          <input type="date" name="to" id="to-date" />
+          <input type="submit" />
+        </form>
+        <form action="/filters/filter-2" method="POST" class="source-filter">
+          <input type="text" name="isource" placeholder="Enter Income Source" />
+          <input type="submit" />
+        </form>
+
+        <form action="/filters/filter-3" method="POST" class="source-filter">
+          <input
+            type="text"
+            name="esource"
+            placeholder="Enter Expense Source"
+          />
+          <input type="submit" />
+        </form>
+        <form action="" method="POST" class="date-category">
+          <input
+            type="text"
+            name="income-source"
+            placeholder="Enter Income Source"
+          />
+          <label for="from-date"
+            >From Date
+            <input type="date" name="from-date" id="from-date" />
+          </label>
+          <input type="submit" />
+        </form>
+        <form action="">
+          <button type="submit">View Current Month Savings</button>
+        </form>
+        <form action="" class="monthly-details">
+          <input type="month" value="2018-05" />
+          <input type="submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
