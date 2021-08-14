@@ -1,0 +1,147 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1fr;
+}
+button {
+  background: white;
+  padding: 5px;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #00b7ff;
+}
+header {
+  padding: 10px;
+  background: coral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 10px;
+  background: coral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.oauth-logo {
+  height: 22px;
+  width: 22px;
+}
+.btn-ctrl {
+  font-size: 22px;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+form input {
+  margin: 10px;
+  padding: 10px;
+}
+label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+}
+label select {
+  padding: 10px;
+  margin: 10px;
+  height: 100px;
+  width: 100%;
+}
+ul {
+  list-style: none;
+}
+.user-nav-options {
+  display: flex;
+  flex-direction: column;
+}
+.dashboard-details {
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-details h1 {
+  font-size: 18px;
+  text-align: center;
+}
+.dashboard-details div {
+  width: 30%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.dashboard-details div ul {
+  width: 90%;
+}
+.dashboard-details li {
+  background: white;
+}
+button {
+  cursor: pointer;
+}
+.savings {
+  font-size: 32px;
+  background: white;
+}
+.date-filter {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border: 1px solid black;
+  background: darkslateblue;
+  color: white;
+}
+input {
+  cursor: pointer;
+}
+.filter {
+  width: 100%;
+}
+.source-filter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid;
+  background: darkorange;
+}
+
+.date-category {
+  border: 1px solid;
+  background: darkgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.monthly-details {
+  border: 1px solid;
+  background: cornflowerblue;
+}
+.filter {
+  margin: 80px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  overflow-x: auto;
+}

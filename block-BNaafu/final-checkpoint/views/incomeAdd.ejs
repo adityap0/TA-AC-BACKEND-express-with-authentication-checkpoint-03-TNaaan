@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="index-title">Add income Details</h1>
+      <a href="/dashboard"><button>back</button></a>
+    </header>
+    <main>
+      <form action="/dashboard/income/add" method="POST">
+        <input
+          type="text"
+          name="sources"
+          placeholder="Specify income source(s)"
+        />
+        <input
+          type="number"
+          name="amount"
+          placeholder="Specify income amount(₹)"
+        />
+        <input type="date" name="date" placeholder="Specify Date" />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer>
+      <h1 class="index-title">An app to manage all your expenses..</h1>
+    </footer>
+  </body>
+</html>
